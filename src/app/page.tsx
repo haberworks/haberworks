@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>What's Cookin With Justin</title>
+        <title>Whats Cookin With Justin</title>
         <meta name="description" content="Personal website of Justin Haber, a jack of many trades and master of some." />
       </Head>
 
