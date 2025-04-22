@@ -50,7 +50,7 @@ const images = [
 ]
 
 export default function GalleryPage() {
-    const [activeImage, setActiveImage] = useState<number | null>(null)
+  const [activeImage, setActiveImage] = useState<number | null>(null)
 
   return (
     <>
@@ -60,23 +60,17 @@ export default function GalleryPage() {
       </Head>
 
       <main className="gallery-page">
-        {/* Page Content */}
-      </main>
-    </>
-  )
-}
+        {/* Page Heading */}
+        <h1 className="gallery-heading">Glimpses</h1>
 
-    return (
-      <main className="gallery-page">
-  
-  <h1 className="gallery-heading">Glimpses</h1>
+        {/* Breadcrumbs */}
+        <nav className="breadcrumb">
+          <Link href="/" className="breadcrumb-link">
+            ← Back to 🍞
+          </Link>
+        </nav>
 
-<nav className="breadcrumb">
-<Link href="/" className="breadcrumb-link">
-← Back to 🍞
-</Link>
-</nav>
-  
+        {/* Gallery Grid */}
         <div className="gallery-grid">
           {images.map((img, index) => (
             <div key={index} className="gallery-card" onClick={() => setActiveImage(index)}>
@@ -91,7 +85,8 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
-  
+
+        {/* Modal for image preview */}
         {activeImage !== null && (
           <div className="modal" onClick={() => setActiveImage(null)}>
             <div className="modal-content">
@@ -107,5 +102,6 @@ export default function GalleryPage() {
           </div>
         )}
       </main>
-    )
-  }
+    </>
+  )
+}
