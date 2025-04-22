@@ -13,56 +13,52 @@ export default function ContactPage() {
       </Head>
 
       <main className="contact-page">
-        {/* Page Content */}
+        {/* Page Heading */}
+        <h1 className="contact-heading">Let&apos;s Chat</h1>
+
+        {/* Breadcrumbs */}
+        <nav className="breadcrumb">
+          <Link href="/" className="breadcrumb-link">
+            ← Back to 🍞
+          </Link>
+        </nav>
+
+        {/* Contact Card */}
+        <div className="contact-card">
+          <div className="contact-info">
+            <p className="contact-name">Justin Haber</p>
+            <p className="contact-role">A Guy Worth Contacting</p>
+            <p className="contact-description">Via These Methods:</p>
+          </div>
+
+          <div className="contact-links">
+            <a
+              href="mailto:haberworks@gmail.com"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📧 Email
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jus-tin-ha-ber/"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💼 LinkedIn
+            </a>
+            <a
+              href="https://gibby.games/"
+              className="contact-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🎲 Gibby Games
+            </a>
+          </div>
+        </div>
       </main>
     </>
-  )
-}
-  return (
-    <main className="contact-page">
-
-      <h1 className="contact-heading">Let&apos;s Chat</h1>
-
-            <nav className="breadcrumb">
-        <Link href="/" className="breadcrumb-link">
-          ← Back to 🍞
-        </Link>
-      </nav>
-
-      <div className="contact-card">
-        <div className="contact-info">
-          <p className="contact-name">Justin Haber</p>
-          <p className="contact-role">A Guy Worth Contacting</p>
-          <p className="contact-description">Via These Methods:</p>
-        </div>
-
-        <div className="contact-links">
-          <a
-            href="mailto:haberworks@gmail.com"
-            className="contact-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📧 Email
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jus-tin-ha-ber/"
-            className="contact-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            💼 LinkedIn
-          </a>
-          <a
-            href="https://gibby.games/"
-            className="contact-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎲 Gibby Games
-          </a>
-        </div>
-      </div>
-    </main>
   )
 }
