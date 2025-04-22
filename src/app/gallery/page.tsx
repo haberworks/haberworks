@@ -5,6 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import './Gallery.css'
 
+export const metadata: Metadata = {
+  title: "Check out Some Pictures I Took",
+  description: "Maybe I should add more possibly perhaps eventually."
+}
+
 const images = [
   {
     src: '/gallery/venice.jpg',
