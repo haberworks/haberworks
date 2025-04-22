@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Home.css'
 
 const navItems = [
