@@ -2,9 +2,24 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import './About.css'
 
 export default function AboutPage() {
+  return (
+    <>
+      <Head>
+        <title>About Justin Haber aka HaberWorks</title>
+        <meta name="description" content="What is the deal with this guy?" />
+      </Head>
+
+      <main className="about-page">
+        {/* Page Content */}
+      </main>
+    </>
+  )
+}
+
   return (
     <main className="about-page">
 
