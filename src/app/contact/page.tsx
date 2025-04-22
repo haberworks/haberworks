@@ -1,14 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Metadata } from 'next'
 import './Contact.css'
-
-// Metadata for Contact Page
-export const metadata: Metadata = {
-  title: "Is it Even Possible to Contact Justin Haber?",
-  description: "Holla at ya boy."
-}
 
 export default function ContactPage() {
   return (
