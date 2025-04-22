@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import Head from 'next/head'
+import { Metadata } from 'next'
 import { useEffect, useState } from 'react'
 import './Home.css'
 
@@ -14,6 +14,12 @@ const navItems = [
   { label: 'Photo Gallery', href: '/gallery', internal: true, offsetX: 39 },
   { label: 'Contact', href: '/contact', internal: true, offsetX: 65 },
 ]
+
+// Metadata to define the title and meta description
+export const metadata: Metadata = {
+  title: "What's Cookin With Justin",
+  description: "Personal website of Justin Haber, a jack of many trades and master of some."
+}
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -38,72 +44,65 @@ export default function Home() {
   }
 
   return (
-    <>
-      <Head>
-        <title>Whats Cookin With Justin</title>
-        <meta name="description" content="Personal website of Justin Haber, a jack of many trades and master of some." />
-      </Head>
+    <main className="main">
+      <header className="header">
+        <h1 className="headline">What&apos;s Cookin&apos;</h1>
+      </header>
 
-      <main className="main">
-        <header className="header">
-          <h1 className="headline">What&apos;s Cookin&apos;</h1>
-        </header>
+      <div className="loaf">
+        {[...navItems].reverse().map((item, index) => {
+          const isHovered = (!isMobile && hoveredIndex === index) || (isMobile && activeIndex === index)
 
-        <div className="loaf">
-          {[...navItems].reverse().map((item, index) => {
-            const isHovered = (!isMobile && hoveredIndex === index) || (isMobile && activeIndex === index)
+          const Wrapper = item.internal ? Link : 'a'
+          const wrapperProps = item.internal
+            ? { href: item.href }
+            : { href: item.href, target: '_blank', rel: 'noopener noreferrer' }
 
-            const Wrapper = item.internal ? Link : 'a'
-            const wrapperProps = item.internal
-              ? { href: item.href }
-              : { href: item.href, target: '_blank', rel: 'noopener noreferrer' }
+          return (
+            <Wrapper
+              key={index}
+              {...wrapperProps}
+              className="slice-container"
+              style={{ transform: `translateX(${item.offsetX}px)`, zIndex: index + 1 }}
+              onMouseEnter={() => !isMobile && setHoveredIndex(index)}
+              onMouseLeave={() => !isMobile && setHoveredIndex(null)}
+              onClick={(e) => {
+                if (!isMobile) return
+                e.preventDefault()
+                handleClick(index, item.href, item.internal)
+              }}
+            >
+              <div className={`slice ${isHovered ? 'hovered' : ''}`}>
+                {isHovered && (
+                  <svg className="slice-label-arc" viewBox="0 0 240 20" width="240" height="20">
+                    <defs>
+                      <path id={`label-arc-${index}`} d="M 20 40 Q 120 -5 220 40" />
+                    </defs>
+                    <text textAnchor="middle" fill="black" fontFamily="'Rye', cursive" fontSize="18">
+                      <textPath xlinkHref={`#label-arc-${index}`} startOffset="50%">
+                        {item.label}
+                      </textPath>
+                    </text>
+                  </svg>
+                )}
+                <Image
+                  src="/Slice.png"
+                  alt={item.label}
+                  width={240}
+                  height={240}
+                  className="slice-image"
+                />
+              </div>
+            </Wrapper>
+          )
+        })}
+      </div>
 
-            return (
-              <Wrapper
-                key={index}
-                {...wrapperProps}
-                className="slice-container"
-                style={{ transform: `translateX(${item.offsetX}px)`, zIndex: index + 1 }}
-                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
-                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-                onClick={(e) => {
-                  if (!isMobile) return
-                  e.preventDefault()
-                  handleClick(index, item.href, item.internal)
-                }}
-              >
-                <div className={`slice ${isHovered ? 'hovered' : ''}`}>
-                  {isHovered && (
-                    <svg className="slice-label-arc" viewBox="0 0 240 20" width="240" height="20">
-                      <defs>
-                        <path id={`label-arc-${index}`} d="M 20 40 Q 120 -5 220 40" />
-                      </defs>
-                      <text textAnchor="middle" fill="black" fontFamily="'Rye', cursive" fontSize="18">
-                        <textPath xlinkHref={`#label-arc-${index}`} startOffset="50%">
-                          {item.label}
-                        </textPath>
-                      </text>
-                    </svg>
-                  )}
-                  <Image
-                    src="/Slice.png"
-                    alt={item.label}
-                    width={240}
-                    height={240}
-                    className="slice-image"
-                  />
-                </div>
-              </Wrapper>
-            )
-          })}
-        </div>
-
-        <section className="footer-container">
-          <footer className="footer">
-            &copy; {new Date().getFullYear()} HaberWorks
-          </footer>
-        </section>
-      </main>
-    </>
+      <section className="footer-container">
+        <footer className="footer">
+          &copy; {new Date().getFullYear()} HaberWorks
+        </footer>
+      </section>
+    </main>
   )
 }
