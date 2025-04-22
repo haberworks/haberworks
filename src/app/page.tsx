@@ -2,8 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'
-import { useEffect, useState } from 'react'
+import { Metadata } from 'next'import { useEffect, useState } from 'react'
 import './Home.css'
 
 const navItems = [
@@ -14,12 +13,6 @@ const navItems = [
   { label: 'Photo Gallery', href: '/gallery', internal: true, offsetX: 39 },
   { label: 'Contact', href: '/contact', internal: true, offsetX: 65 },
 ]
-
-// Metadata to define the title and meta description
-export const metadata: Metadata = {
-  title: "What's Cookin With Justin",
-  description: "Personal website of Justin Haber, a jack of many trades and master of some."
-}
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
