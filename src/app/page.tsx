@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="main">
       <header className="header">
-        <h1 className="headline">What's Cookin'</h1>
+        <h1 className="headline">What&apos;s Cookin&apos;</h1>
       </header>
 
       <div className="loaf">
