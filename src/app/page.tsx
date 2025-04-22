@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import './Home.css'
 
@@ -35,6 +36,20 @@ export default function Home() {
       setActiveIndex(index)
     }
   }
+
+    return (
+    <>
+      <Head>
+        <title>Whats Cookin With Justin</title>
+        <meta name="description" content="Personal website of Justin Haber, a jack of many trades and master of some." />
+      </Head>
+
+      <main className="main">
+        {/* Page Content */}
+      </main>
+    </>
+  )
+}
 
   return (
     <main className="main">
