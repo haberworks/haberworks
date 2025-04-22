@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Metadata } from 'next';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  title: "Whats Cookin With Justin",
+  description: "Personal website of Justin Haber, a jack of many trades and master of some."
+};
 
 export default function RootLayout({
   children,
