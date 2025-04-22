@@ -26,7 +26,7 @@ export default function AboutPage() {
           <p className="about-paragraph">
             Outside of work, I&apos;m an avid tinkerer and thinkerer. See, here I&apos;m messing around with stuff I may not fully understand. But that is life. 
             Stuff I may know a bit more about includes my loving family and friends, my incredible fiancée Ashlynn (a real developer who rightfully judges my hack-work) and our cat Butters (who just wants to eat), my extensive collection of bass guitars that I <a href="https://www.instagram.com/jhawkins.nightshift/" target="_blank">still play sometimes</a>,
-            my Steam library which continues to increase in size and dust accumulation, baseball (Let's Go Mets!), <a href="https://boz-float.itch.io/" target="_blank">making music for indie games</a>, <a href="https://gibby.games/" target="_blank">marketing for home grown board games</a>, and making tasty creations for the people I love in my kitchen. I am incredibly domesticated but don't often feel like it. 
+            my Steam library which continues to increase in size and dust accumulation, baseball (Let&apos;s Go Mets!), <a href="https://boz-float.itch.io/" target="_blank">making music for indie games</a>, <a href="https://gibby.games/" target="_blank">marketing for home grown board games</a>, and making tasty creations for the people I love in my kitchen. I&apos;m pretty domesticated but don&apos;t often feel like it. 
             Maybe I feel right at home in that state of in-between. 
           </p>
         </div>
