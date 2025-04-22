@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'
 import './Gallery.css'
 
 const images = [
@@ -48,12 +47,6 @@ const images = [
     caption: 'Sunset over the Seven Mile Bridge, RIP Hawksnest',
   },
 ]
-
-// Metadata for Gallery Page
-export const metadata: Metadata = {
-  title: "Some of My Photos",
-  description: "Just some pictures I took, I should maybe could possibly add more eventually perhaps."
-}
 
 export default function GalleryPage() {
   const [activeImage, setActiveImage] = useState<number | null>(null)
