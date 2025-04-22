@@ -4,6 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import './About.css'
 
+export const metadata: Metadata = {
+  title: "Learn a bit about Justin",
+  description: "What makes this guy tick?"
+}
+
 export default function AboutPage() {
   return (
     <main className="about-page">
