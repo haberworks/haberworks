@@ -2,14 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'
 import './About.css'
-
-// Metadata for About Page
-export const metadata: Metadata = {
-  title: "About Justin Haber aka HaberWorks",
-  description: "What is the deal with this guy?"
-}
 
 export default function AboutPage() {
   return (
