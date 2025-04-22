@@ -1,9 +1,23 @@
 'use client'
 
 import Link from 'next/link'
+import Head from 'next/head'
 import './Contact.css'
 
 export default function ContactPage() {
+  return (
+    <>
+      <Head>
+        <title>Is it Even Possible to Contact Justin Haber?</title>
+        <meta name="description" content="Holla at ya boy." />
+      </Head>
+
+      <main className="contact-page">
+        {/* Page Content */}
+      </main>
+    </>
+  )
+}
   return (
     <main className="contact-page">
 
