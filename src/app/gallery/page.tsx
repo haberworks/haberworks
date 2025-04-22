@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import './Gallery.css'
 
 const images = [
@@ -50,7 +51,21 @@ const images = [
 
 export default function GalleryPage() {
     const [activeImage, setActiveImage] = useState<number | null>(null)
-  
+
+  return (
+    <>
+      <Head>
+        <title>Some of My Photos</title>
+        <meta name="description" content="Just some pictures I took, I should maybe could possibly add more eventually perhaps." />
+      </Head>
+
+      <main className="gallery-page">
+        {/* Page Content */}
+      </main>
+    </>
+  )
+}
+
     return (
       <main className="gallery-page">
   
