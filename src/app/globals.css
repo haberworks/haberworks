@@ -20,13 +20,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rye', cursive, Arial, Helvetica, sans-serif; /* Update this to use Rye font */
   margin: 0;
   padding: 0;
 }
 
 /* Rye font for headline or themed use */
 .headline,
-.slice-label {
+.slice-label,
+.gallery-heading,      /* Apply Rye font to gallery heading */
+.breadcrumb-link,      /* Apply Rye font to breadcrumb links */
+.modal-caption,        /* Apply Rye font to modal captions */
+.contact-heading {     /* Apply Rye font to contact heading */
   font-family: 'Rye', cursive;
 }
