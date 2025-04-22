@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
 
-      <h1 className="contact-heading">Let's Chat</h1>
+      <h1 className="contact-heading">Let&apos;s Chat</h1>
 
             <nav className="breadcrumb">
         <Link href="/" className="breadcrumb-link">
