@@ -1,0 +1,54 @@
+'use client'
+
+import Link from 'next/link'
+import './Contact.css'
+
+export default function ContactPage() {
+  return (
+    <main className="contact-page">
+
+      <h1 className="contact-heading">Let's Chat</h1>
+
+            <nav className="breadcrumb">
+        <Link href="/" className="breadcrumb-link">
+          ← Back to 🍞
+        </Link>
+      </nav>
+
+      <div className="contact-card">
+        <div className="contact-info">
+          <p className="contact-name">Justin Haber</p>
+          <p className="contact-role">A Guy Worth Contacting</p>
+          <p className="contact-description">Via These Methods:</p>
+        </div>
+
+        <div className="contact-links">
+          <a
+            href="mailto:haberworks@gmail.com"
+            className="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📧 Email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jus-tin-ha-ber/"
+            className="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💼 LinkedIn
+          </a>
+          <a
+            href="https://gibby.games/"
+            className="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎲 Gibby Games
+          </a>
+        </div>
+      </div>
+    </main>
+  )
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+.header {
+  margin-top: 0.1rem;
+  margin-bottom: 16rem;
+}
+
+.headline {
+  font-family: 'Rye', cursive;
+  font-size: 3.75rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.loaf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.slice-container {
+  width: 240px;
+  height: 240px;
+  margin-top: -226px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+.slice {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-out;
+}
+
+.slice.hovered {
+  transform: translateY(-96px);
+}
+
+@keyframes toastImageShift {
+  0%   { filter: brightness(1) contrast(1); }
+  10%  { filter: brightness(0.9) contrast(1.05); }
+  20%  { filter: brightness(0.85) contrast(1.1); }
+  30%  { filter: brightness(0.8) contrast(1.15); }
+  40%  { filter: brightness(0.75) contrast(1.2); }
+  50%  { filter: brightness(0.7) contrast(1.3); }
+  60%  { filter: brightness(0.75) contrast(1.35); }
+  70%  { filter: brightness(0.8) contrast(1.4); }   /* deepest toast */
+  80%  { filter: brightness(0.85) contrast(1.35); }
+  90%  { filter: brightness(0.9) contrast(1.2); }
+  100% { filter: brightness(1) contrast(1); }       /* back to fresh slice */
+}
+
+.slice-label-arc {
+  margin-bottom: 0.5rem;
+  display: block;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+/* Label text stays one color */
+.slice-label-arc text {
+  fill: #000000;
+}
+
+.slice-image {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+/* Apply animated color shift on hover */
+.slice.hovered .slice-image {
+  animation: toastImageShift 1.5s infinite ease-in-out;
+}
+
+.link-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 30; /* was 20 — bump it higher than slice z-index */
+}
+
+.footer-container {
+  margin-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.footer {
+  font-size: 0.875rem;
+  color: #000000;
+  text-align: center;
+}
+
+/* Mobile tap highlight */
+@media (hover: none) and (pointer: coarse) {
+  .slice.hovered {
+    outline: 2px dashed #000000;
+    outline-offset: -10px;
+  }
+}

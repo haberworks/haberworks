@@ -1,0 +1,133 @@
+.gallery-page {
+    padding: 2rem;
+    background-color: #fffef8;
+    color: #111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gallery-heading {
+    font-family: 'Rye', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .gallery-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .gallery-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fffaf0;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-card:hover .caption {
+    opacity: 1;
+  }
+  
+/* Modal styles */
+/* Modal Overlay */
+.modal {
+    position: fixed; /* Make sure the modal is positioned relative to the screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center; /* Center the modal content horizontally */
+    align-items: center; /* Center the modal content vertically */
+    z-index: 1000; /* Ensure it appears above everything else */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    max-width: 90%; /* Limit the width to 90% of the viewport */
+    max-height: 80%; /* Limit the height to 80% of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Modal Image Styling */
+  .modal-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Prevent image from stretching */
+    max-height: 70vh; /* Ensure image doesn't overflow vertically */
+    object-fit: contain; /* Keep the aspect ratio intact */
+    margin-bottom: 1rem;
+  }
+  
+  /* Modal Caption */
+  .modal-caption {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Close Modal: Clicking on the background closes the modal */
+  .modal:hover {
+    cursor: pointer;
+  }
+  
+  
+  .breadcrumb {
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto 2rem;
+    padding-left: 1rem;
+  }
+  
+  .breadcrumb-link {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Rye', cursive;
+    transition: color 0.2s ease;
+  }
+  
+  .breadcrumb-link:hover {
+    color: #a0522d;
+  }
