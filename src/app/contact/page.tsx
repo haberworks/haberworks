@@ -3,11 +3,6 @@
 import Link from 'next/link'
 import './Contact.css'
 
-export const metadata: Metadata = {
-  title: "Is it Even Possible to Contact Justin?",
-  description: "Holla at ya boy!"
-}
-
 export default function ContactPage() {
   return (
     <main className="contact-page">
