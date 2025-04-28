@@ -34,3 +34,11 @@ body {
 .contact-heading {     /* Apply Rye font to contact heading */
   font-family: 'Rye', cursive;
 }
+
+/* Remove the focus outline on mobile for slice images */
+@media (hover: none) and (pointer: coarse) {
+  .slice-container:focus {
+    outline: none;
+  }
+}
+
