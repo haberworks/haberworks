@@ -1,3 +1,7 @@
+/* Gallery Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /* Added Inter for readability */
+
 .gallery-page {
     padding: 2rem;
     background-color: #fffef8;
