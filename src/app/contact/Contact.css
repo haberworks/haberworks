@@ -1,4 +1,7 @@
 /* Contact Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /* Added Inter for readability */
+
 .contact-page {
     background-color: #fffef8;
     color: #111;
