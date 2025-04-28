@@ -68,18 +68,10 @@
   100% { filter: brightness(1) contrast(1); }       /* back to fresh slice */
 }
 
-/* Remove the outline when clicking/tapping a bread slice on mobile */
 @media (hover: none) and (pointer: coarse) {
-  .slice-container:focus {
+  .slice-container:focus-visible {
     outline: none;
   }
-
-  /* Mobile tap highlight */
-  .slice.hovered {
-    outline: 2px dashed #000000;
-    outline-offset: -10px;
-  }
-}
 
 .slice-label-arc {
   margin-bottom: 0.5rem;
