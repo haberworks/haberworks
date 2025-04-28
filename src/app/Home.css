@@ -72,6 +72,7 @@
   .slice-container:focus-visible {
     outline: none;
   }
+}
 
 .slice-label-arc {
   margin-bottom: 0.5rem;
