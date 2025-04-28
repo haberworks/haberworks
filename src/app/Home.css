@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'); /* Added Inter for readability */
 
 .main {
   display: flex;
@@ -72,6 +73,12 @@
   .slice-container:focus {
     outline: none;
   }
+
+  /* Mobile tap highlight */
+  .slice.hovered {
+    outline: 2px dashed #000000;
+    outline-offset: -10px;
+  }
 }
 
 .slice-label-arc {
@@ -114,12 +121,4 @@
   font-size: 0.875rem;
   color: #000000;
   text-align: center;
-}
-
-/* Mobile tap highlight */
-@media (hover: none) and (pointer: coarse) {
-  .slice.hovered {
-    outline: 2px dashed #000000;
-    outline-offset: -10px;
-  }
 }
